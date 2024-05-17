@@ -1,0 +1,66 @@
+apple,elma,0
+banana,muz,0
+grape,uzum,0
+orange,portakal,0
+lemon,limon,0
+strawberry,cilek,0
+cherry,kiraz,0
+peach,seftali,0
+pear,armut,0
+pineapple,ananas,0
+watermelon,karpuz,0
+melon,kavun,0
+blueberry,yaban mersini,0
+raspberry,ahududu,0
+blackberry,bogurtlen,0
+apricot,kayisi,0
+coconut,hindistan cevizi,0
+lime,lim,0
+pomegranate,nar,0
+fig,incir,0
+plum,erik,0
+grapefruit,greypfrut,0
+avocado,avokado,0
+passionfruit,carkifelek meyvesi,0
+dragonfruit,ejderha meyvesi,0
+lychee,lici,0
+carrot,havuc,0
+potato,patates,0
+tomato,domates,0
+onion,sogan,0
+garlic,sarimsak,0
+cucumber,salatalik,0
+lettuce,marul,0
+broccoli,brokoli,0
+spinach,ispanak,0
+cabbage,lahana,0
+pepper,biber,0
+eggplant,patlican,0
+zucchini,kabak,0
+celery,kereviz,0
+beetroot,pancar,0
+radish,turp,0
+asparagus,kuskonmaz,0
+cauliflower,karnabahar,0
+corn,misir,0
+mushroom,mantar,0
+pea,bezelye,0
+pumpkin,bal kabagi,0
+olive,zeytin,0
+ginger,zingiber,0
+chili,biber,0
+leek,pirasa,0
+artichoke,enginar,0
+brussels sprouts,bruksel lahanasi,0
+okra,bamya,0
+parsnip,pastirnak,0
+turnip,salgam,0
+sweet potato,tatli patates,0
+butternut squash,bal kabagi,0
+fennel,rezene,0
+horseradish,hardal,0
+kale,lahana,0
+parsley,maydanoz,0
+rhubarb,rabarba,0
+swiss chard,pazi,0
+watercress,terebinth,0
