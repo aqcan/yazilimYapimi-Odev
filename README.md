@@ -1,27 +1,71 @@
-# İngilizce-Türkçe Kelime Pratik ve Sınav Programı
+# English–Turkish Vocabulary Trainer
 
-Bu program, kullanıcıların İngilizce-Türkçe kelime pratiği yapmalarını ve sınavlara girmelerini sağlar. Ayrıca, bir admin kullanıcısı kelime ekleyebilir ve silebilir.
+A console application in **Python** that helps users memorise English–Turkish word pairs using a **6-repetition rule**: a word keeps coming back until the user has answered it correctly six times, then it is considered learned. Built as an assignment for the *Software Construction* (Yazılım Yapımı) course at Manisa Celal Bayar University (2024).
 
-## Özellikler
+## Features
 
-- Kullanıcı kaydı ve girişi
-- Admin girişi
-- Kelime ekleme ve silme (admin kullanıcı tarafından)
-- İngilizce-Türkçe kelime pratiği
-- İngilizce-Türkçe kelime sınavı
-- Sınav raporu oluşturma
+- User registration and login (stored as text files)
+- Admin panel to add and delete words
+- **Practice mode:** asks the least-practised words first, gives a second chance on a wrong answer and tracks each word's correct-answer count
+- **Exam mode:** 20 random words, 5 points each, score out of 100
+- Exam report exported as a Word document (`sinavraporu.docx`) with correct answers in green and wrong ones in red (`python-docx`)
 
-## Kullanım
-Kullanıcı Kaydı ve Girişi: Kullanıcı kaydı oluşturmak için ‘2’ seçeneğini seçin. Kullanıcı adınızı ve şifrenizi girin. Kayıt işlemi tamamlandığında, kullanıcı adınız ve şifrenizle giriş yapabilirsiniz.
+## Sample session
 
-Kullanıcı girişi yapmak için ‘1’ seçeneğini seçin. Kayıtlı kullanıcı adınızı ve şifrenizi girin. Giriş başarılı olduğunda, İngilizce-Türkçe kelime pratiği yapma veya sınav girişi yapma seçeneği sunulur.
+Real output from `dilProgrami(1.2).py`:
 
-Admin Girişi: Admin girişi yapmak için ‘3’ seçeneğini seçin. Admin kullanıcı adı ve şifresini girin (her ikisi de “admin”). Giriş başarılı olduğunda, admin kullanıcıya kelime ekleme veya silme seçeneği sunulur.
+```text
+1. Giriş Yap
+2. Kayıt Ol
+3. Admin Girişi
+Seçiminizi yapın (1-3): 1
+Kullanıcı adınızı girin: sinan
+Şifrenizi girin: 1234
+Başarıyla giriş yaptınız! Hoşgeldin sinan.
+1. Pratik Yap
+2. Sınava Gir
+Ne yapmak istersiniz? (1-2): 1
+Kaç kelime ile pratik yapmak istersiniz? (0-50): 4
+Bu İngilizce kelimenin Türkçesi nedir? problem
+Cevabınız: sorun
+Doğru cevap!
+Bu İngilizce kelimenin Türkçesi nedir? good
+Cevabınız: kotu
+Yanlış cevap, tekrar dene.
+Cevabınız: iyi
+Doğru cevap!
+Bu İngilizce kelimenin Türkçesi nedir? try
+Cevabınız: denemek
+Doğru cevap!
+Bu İngilizce kelimenin Türkçesi nedir? part
+Cevabınız: parca
+Doğru cevap!
+Toplam 4 soru soruldu. 4 tanesini doğru, 0 tanesini yanlış yanıtladınız.
+```
 
-Kelime Pratiği Yapma: Kelime pratiği yapmak için, giriş yaptıktan sonra ‘1’ seçeneğini seçin. Kaç kelime ile pratik yapmak istediğinizi belirtin. Daha sonra, belirttiğiniz sayıda kelime sorulur ve Türkçe karşılıklarını tahmin etmeniz istenir.
+## Files
 
-Sınav Girişi Yapma: Sınav girişi yapmak için, giriş yaptıktan sonra ‘2’ seçeneğini seçin. Rastgele 20 kelime seçilir ve bu kelimelerin Türkçe karşılıklarını tahmin etmeniz istenir. Her doğru cevap 5 puan değerindedir ve sınav sonunda toplam puanınız hesaplanır ve size bildirilir.
+| File | Description |
+|---|---|
+| `dilProgrami(1.2).py` | Latest version |
+| `dilProgrami(1.0).py`, `dilProgrami(1.1s).py` | Earlier iterations |
+| `word_pairs.txt` | Word list: `english,turkish,correct_count` |
+| `backup_words.txt` | Backup word list |
+| `sinavraporu.docx` | Example exam report |
 
-Kelime Ekleme ve Silme (Admin Kullanıcı): Admin girişi yaptıktan sonra, ‘1’ seçeneğini seçerek yeni bir kelime ekleyebilirsiniz. Eklemek istediğiniz İngilizce kelimeyi ve Türkçe karşılığını girin. ‘2’ seçeneğini seçerek bir kelimeyi silebilirsiniz. Silmek istediğiniz kelimenin İngilizcesini girin.
+## Running
 
-Sınav Raporu Oluşturma: Sınav sonunda, bir sınav raporu oluşturup oluşturmayacağınızı belirtmeniz istenir. Rapor isterseniz, sınav raporu ‘sinavraporu.docx’ olarak kaydedilir. Rapor, sınavda sorulan her kelimeyi, verdiğiniz cevabı ve o sorudan aldığınız puanı içerir.
+```bash
+pip install python-docx
+python "dilProgrami(1.2).py"
+```
+
+Admin credentials: `admin` / `admin`.
+
+---
+
+## TR
+
+Kullanıcıların İngilizce-Türkçe kelime çalışmasını ve sınava girmesini sağlayan konsol programı. Bir kelime 6 kez doğru bilinene kadar tekrar sorulur. Admin kelime ekleyip silebilir. Sınav sonunda sorular, verilen cevaplar ve puanlar `sinavraporu.docx` olarak kaydedilebilir.
+
+**Kullanım:** Ana menüde `2` ile kayıt olun, `1` ile giriş yapın. Ardından `1 – Pratik Yap` (istediğiniz sayıda kelime, yanlışta ikinci hak) veya `2 – Sınava Gir` (20 rastgele kelime, her doğru 5 puan) seçin. `3` ile admin girişi yapılır (`admin` / `admin`).
